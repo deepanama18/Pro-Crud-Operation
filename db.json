@@ -1,0 +1,34 @@
+{
+  "users": [
+    {
+      "name": "RohitG",
+      "username": "Golekar",
+      "email": "golekar@gamil.com",
+      "id": 3
+    },
+    {
+      "id": 4,
+      "name": "Ritul",
+      "username": "Desai",
+      "email": "ritul@gmail.com"
+    },
+    {
+      "id": 5,
+      "name": "Deepa",
+      "username": "Nama",
+      "email": "deepa@gmail.com"
+    },
+    {
+      "name": "Pooja",
+      "username": "nama",
+      "email": "pooja@gmail.com",
+      "id": 6
+    },
+    {
+      "name": "Pooja",
+      "username": "Nama",
+      "email": "deepa@gmail.com",
+      "id": 7
+    }
+  ]
+}
