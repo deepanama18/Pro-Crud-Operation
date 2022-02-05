@@ -26,11 +26,14 @@ function Header() {
               <Link to="/">Home</Link>
             </li>
             <li className="nav-item active">
-              <Link to="/adduser">Adduser</Link>
-            </li>
-            <li className="nav-item active">
               <Link to="/search">SearchK</Link>
             </li>
+            <li className="nav-item active">
+              <Link to="/adduser"  style={{marginLeft:"150vh"}}>  <button
+               className="btn btn-success" 
+               >Addusers</button></Link>
+            </li>
+
           </ul>
         </div>
       </nav>

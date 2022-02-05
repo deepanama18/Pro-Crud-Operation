@@ -1,34 +1,58 @@
 {
   "users": [
     {
-      "name": "RohitG",
-      "username": "Golekar",
+      "name": "RohitG***",
+      "username": "Golekar^^",
       "email": "golekar@gamil.com",
       "id": 3
     },
     {
       "id": 4,
-      "name": "Ritul",
-      "username": "Desai",
+      "name": "Ritul*",
+      "username": "Desai^",
       "email": "ritul@gmail.com"
     },
     {
       "id": 5,
-      "name": "Deepa",
-      "username": "Nama",
+      "name": "Deepa*",
+      "username": "Nama@",
       "email": "deepa@gmail.com"
     },
     {
-      "name": "Pooja",
-      "username": "nama",
+      "name": "Pooja**",
+      "username": "Nama//",
       "email": "pooja@gmail.com",
-      "id": 6
+      "id": 7
     },
     {
-      "name": "Pooja",
+      "name": "Kaveri*",
+      "username": "Nama****",
+      "email": "kaveri@gmail.com",
+      "id": 8
+    },
+    {
+      "name": "Soundary*",
+      "username": "Nama***",
+      "email": "sou@gmail.com",
+      "id": 9
+    },
+    {
+      "name": "Nagesh",
+      "username": "Boda**",
+      "email": "nagesh@gmail.com",
+      "id": 10
+    },
+    {
+      "name": "SoundaryaN",
       "username": "Nama",
-      "email": "deepa@gmail.com",
-      "id": 7
+      "email": "deepanama18@gmail.com",
+      "id": 11
+    },
+    {
+      "name": "Kiran",
+      "username": "joe",
+      "email": "kiran@gmail.com",
+      "id": 12
     }
   ]
 }

@@ -1,10 +1,22 @@
-import React, { useState,useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useNavigate, useParams } from "react-router-dom";
 
 function Edituser() {
+  let { id } = useParams();
 
- let { id } = useParams();
+  console.log(id);
+
+  useEffect(() => {
+    editusers();
+  }, []);
+
+  const editusers = () => {
+    axios.get(`http://localhost:3003/users/${id}`).then((res) => {
+      console.log(res.data);
+      setEdituser(res.data)
+    });
+  };
 
   const navigate = useNavigate();
 
@@ -14,11 +26,7 @@ function Edituser() {
     email: "",
   });
 
-  useEffect(()=>{
-    editusers()
-  },[])
-
- const {name, username, email} = edituser;
+  const { name, username, email } = edituser;
 
   const addData = (e) => {
     setEdituser({ ...edituser, [e.target.name]: e.target.value });
@@ -26,25 +34,24 @@ function Edituser() {
 
   const handlesubmit = (e) => {
     e.preventDefault();
-    const userdata = axios.put(`http://localhost:3003/users/${id}`, edituser);
-    setEdituser(userdata);
+     axios
+      .put(`http://localhost:3003/users/${id}`, edituser)
+      .then((res) => {
+        console.log(res.data);
+      });
     navigate("/", { replace: true });
   };
 
-  const editusers = () => {
-    const edituser = axios.get(`http://localhost:3003/users/${id}`);
-    setEdituser(edituser)
-    console.log(edituser)
-  }
-
   return (
     <div className="container">
-    <div className="my-4">
-      <h1 style={{ color: "violet" }}>Edituser Page</h1>
-     
+      <div className="my-4">
+        <h1 style={{ color: "violet" }}>Edituser Page</h1>
+
         <form className="row g-3" onSubmit={(e) => handlesubmit(e)}>
           <div className="col-md-6">
-            <label for="inputEmail4" className="form-lable">Name</label>
+            <label for="inputEmail4" className="form-lable">
+              Name
+            </label>
             <input
               type="text"
               className="form-control"
@@ -52,11 +59,13 @@ function Edituser() {
               required
               value={name}
               placeholder="Enter your Name"
-              onChange={(e)=>addData(e)}
+              onChange={addData}
             />
           </div>
           <div class="col-md-6">
-            <label for="formGroupExampleInput2" className="form-lable">Username</label>
+            <label for="formGroupExampleInput2" className="form-lable">
+              Username
+            </label>
             <input
               type="text"
               class="form-control"
@@ -81,7 +90,9 @@ function Edituser() {
             <br />
           </div>
           <div className="col-12">
-            <button type="submit" className="btn btn-warning">Editusers</button>
+            <button type="submit" className="btn btn-warning">
+              Editusers
+            </button>
           </div>
         </form>
       </div>

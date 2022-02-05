@@ -17,8 +17,10 @@ function Adduser() {
 
   const handlesubmit = (e) => {
     e.preventDefault();
-    const userdata = axios.post("http://localhost:3003/users", adduser);
-    setAdduser(userdata);
+     axios.post("http://localhost:3003/users", adduser).then(res=>{
+       console.log(res.data);
+     })
+    // setAdduser(userdata);
     navigate("/", { replace: true });
   };
 
@@ -65,7 +67,7 @@ function Adduser() {
             <br />
           </div>
           <div className="col-12">
-            <button className="btn btn-success">Addusers</button>
+            <button className="btn btn-success">Submit</button>
           </div>
         </form>
       </div>

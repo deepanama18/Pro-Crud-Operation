@@ -51,8 +51,10 @@ function Home() {
                 >
                   Delete
                 </button>
-              
-                <Link to={`/edituser/${ele.id}`} className="btn btn-primary">Edit</Link>
+
+                <Link to={`/edituser/${ele.id}`} className="btn btn-primary">
+                  Edit
+                </Link>
               </td>
             </tr>
           ))}
